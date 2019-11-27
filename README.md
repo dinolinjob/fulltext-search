@@ -2,7 +2,7 @@
     
 ## What it Does?
 
-###It takes in multiple paragraphs of text, assigns a unique ID To each paragraph and stores the words to paragraph mappings on an inverted index. This is similar to what elasticsearch does. This paragraph can also be referred to as a ‘document’.
+### It takes in multiple paragraphs of text, assigns a unique ID To each paragraph and stores the words to paragraph mappings on an inverted index. This is similar to what elasticsearch does. This paragraph can also be referred to as a ‘document’.
 
 ### Given a word to search for, it lists out the top 10 paragraphs in which the word is present.
 
