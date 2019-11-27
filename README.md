@@ -12,7 +12,6 @@
 - [x] Convert all words to lowercase
 - [x] TIndex these words against the documents they are from.
 - [x] Generate a unique ID for every document that is index.
-- [x] Generate a unique ID for every document that is index.
 - [x] A paragraph is defined by two newline characters
 
 ## Features
