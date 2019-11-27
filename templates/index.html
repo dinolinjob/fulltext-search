@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Tap Search</title>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+ <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
+</head>
+
+<body>
+
+ <nav>
+    <div id="navigation_done" class="nav-wrapper">
+      <a href="/" class="brand-logo"><img src="https://s3-ap-south-1.amazonaws.com/tapchief-blog/blog/wp-content/uploads/2019/06/04214940/LogoMark.png" height=65px><font color="white" style="padding:10px; position: absolute; bottom: 10px; font-weight: bold;">TAPSEARCH</font> </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+      <font color="black" style="position: absolute; bottom: 0.2px; right: 85px; font-weight: bold;">SOURCE CODE =></font> </a>
+      
+        	<a target="__blank" href="https://github.com/dinolinjob">
+
+        	<img class="github" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height=65px style="border-radius: 200px; border: 5px solid black;"></a></li>
+      </ul>
+    
+</div>
+  </nav>
+
+  <div class="row">
+    <div class="col s12 m7" id="col_handler">
+      <div class="card" style="height: 100%;width:300px;">
+          <span class="card-title">Important Note</span>
+           <div class="card-content">
+          <p>(i) Enter the term that has to be searched.</p>
+          <p>(ii) Type or Paste the paragraphs.</p>
+          <p>(iii) Click search to get Top 10 documents will be displayed in the right card.</p>
+          <p>(iv) Click clear to Clear the index and all indexed documents.</p>
+        </div>
+        </div>
+      </div>
+
+    <div  class="col_handler" style="float: right; margin-top:10px;">
+      <div class="card" style="height: 100%;width:300px;float: right;">
+          <span class="card-title">Top Documents on Search</span>
+           <div class="card-content">
+           	<ol>
+           	<p><b>{{ message }}</b></p> <br>
+           	{% for doc_list in doc_list %}
+           	<li>{{ doc_list }}</li> <br>
+      		{% endfor %}
+      		<ol>
+      		
+        </div>
+        </div>
+      </div>
+
+  </div>
+<div class = "container">
+<form action="{{ url_for('search') }}" method="POST">
+
+    <div class="wrap">
+   <div class="search">
+
+      <input id="search_bar" type="text" name="search_text" class="searchTerm" placeholder="Type the term to search" style="border: 5px solid orange;">
+      <br>
+      <textarea id="text_area" name="text" class="searchTerm" placeholder="Enter / Paste Paragraphs"></textarea>
+
+      <a href="{{url_for('clear')}}"> <button id="btn_design0" type="button" class="searchButton" >clear
+      </button></a>
+
+      <button  id="btn_design1" type="submit" class="searchButton" name="submit" value="submit">
+      	search
+     </button>
+   </div>
+</div>
+</form>
+
+
+</div>
+
+
