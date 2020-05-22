@@ -62,4 +62,4 @@ python app.py
 
 ## Full Text Search Demo
 
-![demo](tap.gif)
+![demo](fts.gif)
