@@ -1,4 +1,4 @@
-# Full Text Search  - Full Text Search  (<https://fulltext-search-dino.herokuapp.com/)
+# Full Text Search  - Full Text Search  (<https://fulltext-search-dino.herokuapp.com/>)
     
 ## What it Does?
 
