@@ -60,6 +60,6 @@ python app.py
 ```
 * **Step 4** - Go to `localhost:5000` in your web browser to see the application live.
 
-## Tap Search Demo
+## Full Text Search Demo
 
 ![demo](tap.gif)
